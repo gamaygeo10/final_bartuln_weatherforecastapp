@@ -15,6 +15,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     HomePageRoutingModule
   ],
   declarations: [HomePage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Add this line
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {}
