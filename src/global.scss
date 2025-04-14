@@ -1,0 +1,473 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+
+body[color-theme='light'] {
+  --ion-background-color: #eaeaea;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #f5f5f5;
+  --ion-toolbar-color: #000000;
+}
+
+body[color-theme='light'] ion-content {
+  --background: var(--ion-background-color);
+}
+
+body[color-theme='light'] ion-card {
+  --background: #ffffff;
+  --color: var(--ion-text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+body[color-theme='light'] .modal-content {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+body[color-theme='light'] .modal-content h2 {
+  color: #000000;
+}
+
+body[color-theme='light'] .modal-content p {
+  color: #333333;
+}
+
+body[color-theme='light'] .modal-content button {
+  background-color: #f0f0f0;
+  color: #000000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body[color-theme='light'] .modal-content button:hover {
+  background-color: #e0e0e0;
+}
+
+body[color-theme='light'] .red-button,
+body[color-theme='dark'] .red-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body[color-theme='light'] .red-button:hover,
+body[color-theme='dark'] .red-button:hover {
+  background-color: #e60000;
+}
+
+body[color-theme='dark'] {
+  --ion-background-color: #1e1e1e;
+  --ion-text-color: #ffffff;
+  --ion-toolbar-background: #2c2c2c;
+  --ion-toolbar-color: #ffffff;
+}
+
+body[color-theme='dark'] ion-content {
+  --background: var(--ion-background-color);
+}
+
+body[color-theme='dark'] ion-card {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+}
+
+body[color-theme='dark'] ion-card-title,
+body[color-theme='dark'] ion-card-header,
+body[color-theme='dark'] ion-card-content {
+  color: #ffffff;
+}
+
+body[color-theme='dark'] .modal-content {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+body[color-theme='dark'] .modal-content h2 {
+  color: #ffffff;
+}
+
+body[color-theme='dark'] .modal-content p {
+  color: #d3d3d3;
+}
+
+body[color-theme='dark'] .modal-content button {
+  background-color: #444444;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body[color-theme='dark'] .modal-content button:hover {
+  background-color: #555555;
+}
+
+body[color-theme='dark'] .curr-forecast-card {
+  background-color: #3a3a3a;
+}
+
+body[color-theme='dark'] .hourly-forecast-card::before {
+  background-color: #555555;
+}
+
+body[color-theme='dark'] .five-day-forecast-card::before {
+  background-color: #555555;
+}
+
+/* Dark Theme for Hourly Forecast Cards */
+body[color-theme='dark'] .hourly-forecast-card {
+  background-color: #3a3a3a; 
+  color: #ffffff; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); 
+  border-radius: 8px; 
+}
+
+body[color-theme='dark'] .hourly-forecast-card p.label {
+  color: #ffffff; 
+}
+
+/* Dark Theme for 5-Day Forecast Cards */
+body[color-theme='dark'] .five-day-forecast-card {
+  background-color: #3a3a3a; 
+  color: #ffffff; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); 
+  border-radius: 8px; 
+}
+
+body[color-theme='dark'] .five-day-forecast-card p.label {
+  color: #ffffff; 
+}
+
+/* Dark Theme for Current Weather Card */
+body[color-theme='dark'] .current-weather {
+  background-color: transparent; 
+  color: #ffffff; 
+  box-shadow: none; 
+  border-radius: 8px; 
+}
+
+body[color-theme='dark'] .current-weather p.label {
+  color: #ffffff; 
+}
+
+body[color-theme='dark'] .label {
+  color: #f3f3f3 !important;
+}
+
+
+/* Dark Theme for Searched Weather Card */
+body[color-theme='dark'] .searched-weather-title {
+  color: #ffffff; 
+}
+
+
+body[color-theme='dark'] ion-card-title,
+body[color-theme='dark'] ion-card-header,
+body[color-theme='dark'] ion-card-content {
+  color: #ffffff; 
+}
+
+body[color-theme='dark'] .enter {
+  --background: #3a3a3a;
+  --color: #ffffff;
+  border-radius: 8px;
+}
+
+body[color-theme='dark'] ion-item.rounded-input {
+  --background: #3a3a3a;
+  --color: #ffffff;
+}
+
+body[color-theme='light'] ion-item.rounded-input {
+  --background: #ffffff;
+  --color: #3a3a3a;
+}
+
+ion-item.rounded-input
+
+body[color-theme='light'] .enter {
+  --background: #ffffff;
+  --color: #000000;
+  border-radius: 8px;
+}
+
+body[color-theme='dark'] ion-input {
+  --color: #ffffff;
+  --placeholder-color: #cccccc;
+}
+
+body[color-theme='light'] .rounded-button {
+  background-color: #000000; 
+  color: #ffffff; 
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+body[color-theme='dark'] .rounded-button {
+  background-color: #ffffff; 
+  color: #000000; 
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+body[color-theme='dark'] .rounded-button:hover {
+  background-color: #ff77d6; 
+}
+
+body[color-theme='light'] .rounded-button:hover {
+  background-color: #ff77d6; 
+}
+
+
+.hourly-forecast-card {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  font-size: 0.75rem;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourly-forecast-card ion-card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.hourly-forecast-card p {
+  font-size: 0.7rem;
+  margin: 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.hourly-forecast-card p.data {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.hourly-forecast-card p.label {
+  font-size: 0.6rem;
+  color: #666;
+  margin: 0;
+}
+
+.forecast-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.forecast-column {
+  flex: 1;
+  text-align: center;
+}
+
+.forecast-column p.data {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.forecast-column p.label {
+  font-size: 0.6rem;
+  color: #666;
+  margin: 0;
+}
+
+.five-day-forecast-card {
+  width: 100%;
+  height: auto;
+  font-size: 0.9rem;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 16px;
+}
+
+.five-day-forecast-card ion-card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.five-day-forecast-card p {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.five-day-forecast-card p.data {
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.five-day-forecast-card p.label {
+  font-size: 0.8rem !important;
+  color: #666;
+}
+
+.searched-weather-title {
+  font-size: 2rem !important;
+  font-weight: bold;
+  text-align: center;
+  margin: 16px 0;
+  color: #333;
+}
+
+ion-toast {
+  --background: #333;
+  --color: white;
+}
+
+.current-weather-container,
+.searched-weather-container,
+.five-day-forecast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.current-weather,
+.searched-weather-card,
+.five-day-forecast-card {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hourly-forecast-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hourly-forecast-card::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hourly-forecast-card ion-card-title {
+  position: relative;
+  z-index: 1;
+}
+
+.five-day-forecast-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.five-day-forecast-card::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-color: lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.five-day-forecast-card ion-card-title {
+  position: relative;
+  z-index: 1;
+}
+
+ion-input.enter {
+  border-radius: 20px !important;
+}
+
+button.rounded-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+ion-item.rounded-input {
+  --border-radius: 25px;
+  --background: #f1f1f1;
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+  --highlight-color-focused: transparent;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
